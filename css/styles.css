@@ -296,13 +296,13 @@ img {
     background-color: var(--accent-white-color);
     border-radius: 50%;
 }
-.socials-icon:hover,
-.socials-icon:focus {
-    fill: var(--accent-white-color);
+.socials-link:hover,
+.socials-link:focus  {
+    color: var(--accent-white-color);
     background-color: var(--accent-color);
 }
-.socials-icon{
-    color: currentColor;
+.socials-icon {
+    fill: currentColor;
 }
 .button {
     border-radius: 4px;
@@ -347,6 +347,7 @@ img {
 .customers {
     display: flex; 
     border-radius: 4px; 
+    gap: 30px;
 }
 .button-customers {
     padding: 0px;
@@ -356,7 +357,14 @@ img {
 .button-icon {
     width: 170px;
     height: 92px;
+    fill: #AFB1B8;
+    background-color: var(--accent-white-color);
 }
+.button-icon:hover,
+.button-icon:focus {
+    fill: var(--accent-color);
+}
+
 .section-works {
     margin-bottom: 94px;
 }
