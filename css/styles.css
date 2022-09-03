@@ -10,6 +10,9 @@ button color #F5F4FA */
 --section-title-colot: #212121;
 --accent-color: #2196F3;
 --accent-white-color: #FFFFFF;
+
+--items: 1;
+--indent: 30px;
 }
 body {
     background-color: var(--accent-white-color);
@@ -105,8 +108,12 @@ img {
 }
 
 .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
     color: currentColor;
+
 }
 
 .site-nav .item:not(:last-child) {
@@ -154,21 +161,6 @@ img {
     color: var(--accent-color);
 }
 
-.email::before {
-    content: "";
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    background-image: url(../images/envelope\ \(hover\).svg);
-}
-
-.phone::before {
-    content: "";
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    background-image: url(../images/Vector.svg);
-}
 .contacts-link {
     display: flex;
     align-items: baseline;
@@ -242,21 +234,17 @@ img {
 .feature-list {
     display: flex;
     align-items: center;
-    gap: 30px;
+    padding: 0px;
+    gap: 30px; 
 }
-.feature-item {
+.features-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 270px;
-}
-.feature-item::before {
-    display: block;
-    content: "";
     height: 120px;
-    border-radius: 4px;
-    margin-bottom: 30px;
     background: #F5F4FA;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 4px;
 }
 .section-what-we-do {
     padding-bottom: 94px;
@@ -270,16 +258,15 @@ img {
     display: flex;
     justify-content: center;
     margin: -15px;
-    
 }
 .our-team-names {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-    
 }
 .our-team-names p {
     margin-bottom: 30px;
+    
 }
 .socials {
     display: flex;
@@ -303,6 +290,11 @@ img {
 }
 .socials-icon {
     fill: currentColor;
+}
+.shadows {
+    background: var(--accent-white-color) ;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .button {
     border-radius: 4px;
@@ -349,7 +341,10 @@ img {
     border-radius: 4px; 
     gap: 30px;
 }
-.button-customers {
+.button-customer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -410,27 +405,25 @@ img {
 .portfolio-nav .list {
     margin-bottom: 50px;
 }
-.portfolio-works {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .portfolio-text {
     padding: 20px 26px;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
 }
-.flex-element {
-   margin: 15px;
-   border-right: 1px solid #EEEEEE;
-   border-bottom: 1px solid #EEEEEE;
-   border-left: 1px solid #EEEEEE;
-   background-color: var(--accent-white-color);
-}
 .portfolio-works {
-    margin: -15px;
+    --items: 3;
 }
-
+.card-set {    
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+.card-set-items {
+   flex-basis: calc(100% - var(--indent) * (var(--items) - 1)) / var(--items);
+ }
+ 
 .footer {
    padding-top: 60px;
    padding-bottom: 60px;
@@ -443,6 +436,11 @@ img {
 .footer .logo {
     display: block;
     margin-bottom: 20px;
+}
+.footer > .container {
+    display: flex;
+    align-items: baseline;
+    gap: 60px;
 }
 .footer .link {
     color: rgba(255, 255, 255, 0.6);;
@@ -474,4 +472,28 @@ img {
 }
 .footer-link:not(:last-child) {
 margin-bottom: 10px;
+}
+.find-us {
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: var(--accent-white-color);
+}
+.footer-socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color:var(--accent-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+    color: var(--accent-white-color);
+    background-color: var(--accent-color);
 }
