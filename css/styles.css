@@ -362,6 +362,7 @@ img {
 .button-icon:hover,
 .button-icon:focus {
     fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .section-works {
@@ -502,5 +503,5 @@ margin-bottom: 10px;
     background-color: var(--accent-color);
 }
 .footer-socials-icon {
-     fill: currentColor;
+     fill: var(--accent-white-color);
 }
