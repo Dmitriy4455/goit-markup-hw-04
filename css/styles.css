@@ -168,6 +168,9 @@ img {
 }
 /*Hero*/
 .hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -175,7 +178,7 @@ img {
     color: var(--accent-white-color);
     background-color: var(--section-title-colot);
     text-align: center;
-
+    background-repeat: no-repeat;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url("../images/hero-bg.jpg");
@@ -231,9 +234,11 @@ img {
     padding-bottom: 94px;
     background: #F5F4FA;
 }
+.feature-item { 
+    width: 270px;
+}
 .feature-list {
     display: flex;
-    align-items: center;
     padding: 0px;
     gap: 30px; 
 }
@@ -241,8 +246,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
     height: 120px;
+    margin-bottom: 30px;
     background: #F5F4FA;
     border-radius: 4px;
 }
@@ -252,12 +257,12 @@ img {
 .what-we-do {
     display: flex;
     justify-content: center;
-    margin: -15px;
+    gap: 30px;
 }
 .our-team {
     display: flex;
     justify-content: center;
-    margin: -15px;
+    gap: 30px;
 }
 .our-team-names {
     padding-top: 30px;
@@ -333,12 +338,11 @@ img {
     margin-right: 8px;
 }
 .section-customers {
-    margin-top: 94px;
+    padding-top: 50px;
     padding-bottom: 94px;
 }
 .customers {
-    display: flex; 
-    border-radius: 4px; 
+    display: flex;  
     gap: 30px;
 }
 .button-customer {
@@ -474,7 +478,7 @@ img {
 margin-bottom: 10px;
 }
 .find-us {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -496,4 +500,7 @@ margin-bottom: 10px;
 .footer-socials-link:focus {
     color: var(--accent-white-color);
     background-color: var(--accent-color);
+}
+.footer-socials-icon {
+     fill: currentColor;
 }
