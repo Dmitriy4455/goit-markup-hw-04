@@ -351,7 +351,7 @@ img {
     justify-content: center;
     width: 170px;
     height: 92px;
-    padding: 0px;
+    
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
@@ -359,17 +359,16 @@ img {
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
-    background-color: var(--accent-white-color);
 }
-.button-icon:hover,
-.button-icon:focus {
+
+.button-customer:hover .button-icon,
+.button-customer:focus .button-icon{
     fill: var(--accent-color);
 }
 .button-customer:hover,
 .button-customer:focus {
     border: 1px solid var(--accent-color);
 }
-
 .section-works {
     margin-bottom: 94px;
 }
